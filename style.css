@@ -1,0 +1,164 @@
+
+:root{
+    --green-pigment: #31AA52ff;
+    --mango: #FBBD01ff;
+    --blue: #232DECff;
+    --cinnabar: #ED4434ff;
+}
+*{
+    margin: 0;
+    padding: 0;
+    
+    font-family: arial,sans-serif;
+}
+body{
+  font-size: calc(16px + 1vw);
+  padding: 1rem 5rem;
+}
+html{
+    font-size: 1em;
+}
+ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: flex-end;
+}
+input[type=submit], button{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    font-size: 12px;
+    color:grey;
+}
+a:hover{
+ text-decoration: underline;
+}
+input:focus{
+    outline: none;
+}
+h1{
+    font-size: 400%;
+    display: flex;
+    gap: 1px;
+}
+h1 span:nth-child(1),h1 span:nth-child(4){
+    color: var(--blue);
+    margin: 0;
+}
+h1 span:nth-child(2), h1 span:nth-child(6){
+    color: var(--cinnabar);
+}
+h1 span:nth-child(5){
+    color: var(--green-pigment)
+}
+h1 span:nth-child(3){
+    color: var(--mango);
+}
+h1 span:nth-child(6) {
+    transform: rotate(-10deg);
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    gap: 5rem;
+}
+.gSearch{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.searchBar{
+    border-radius: 53px;
+    border: 1px solid #f8f9fa;
+    width: calc(632px + 6px);
+    max-width: 584px;
+ }
+.searchBar input{
+ padding: 1rem;
+ border-radius: 0px 53px 53px 0px;
+ border-color: transparent;
+ cursor: pointer;
+ user-select: none;
+}
+.searchBar button{
+  width: 50px;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 53px 0 0 53px;
+  border-color: transparent;
+}
+.searchBar svg{
+    width: 100%;
+  }
+.btns{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.btns>*{
+    background-color: #f8f9fa;
+    padding: 8px 16px;
+    border-color: transparent;
+}
+.gAdvanced{
+    display: flex;
+    justify-content: space-between;
+}
+.gAdvanced input{
+    padding-left: 16px;
+}
+.AdvancedSearch{
+    background-color: var(--blue);
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    /* float: right; */
+    align-self: flex-end;
+}
+#formAdvanced{
+ display: flex;
+ flex-direction: column;
+ gap: 5px;
+ max-width: 584px ;
+}
+label {
+    font-size:12px;
+    text-transform: capitalize;
+}
+.gAdvanced input{
+    width: 60%;
+}
+@media(max-width : 600px){
+    body {
+        padding: .5rem 2rem;
+    }
+    .gSearch{
+        width: 100%;
+    }
+    .searchBar{
+      width: 100%;
+    }
+    .gAdvanced{
+        flex-direction: column;
+    }
+    .gAdvanced input{
+        padding: .5rem .2rem;
+        width: 100%;
+    }
+   
+}
+@media (max-width:350px){
+    body {
+        padding: .5rem;
+    }
+    
+   .searchBar input {
+        padding: .5rem ;
+    }
+}
